@@ -42,9 +42,10 @@ async function fetchProductsAsync() {
 //Helper function to display products to page
 function displayProducts(newProduct) {
     //looping = creating divs to store new products
-    newProduct.forEach(product => {
+    newProduct.slice(0, 5).forEach(product => { //loops through first 5
         const div = document.createElement('div');
-        div.innerHTML = `<h3>${product.fields.name}</h3>`;
+        //name / picture / price
+        div.innerHTML = `<h3>${product.fields.name}</h3><img src="${product.fields.image[0].url}"><br><h4>Price: $${product.fields.price}</h4>`;
         mainContainer.appendChild(div);
     });    
 
@@ -54,3 +55,9 @@ function handleError(error) {
 }
 
 fetchProductsAsync()
+
+//Task 4
+//    ^ 
+//    |
+//    |
+//Inside displayProducts
