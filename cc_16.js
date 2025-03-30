@@ -51,13 +51,15 @@ function displayProducts(newProduct) {
 
 }//Handling Errors displays red message
 function handleError(error) {
+    console.log(`An error occured: ${error}`) //Task 5 < -------
     mainContainer.innerHTML = `<p style="color:red;">Failed to load products</p>`;
 }
 
 fetchProductsAsync()
 
-//Task 4
-//    ^ 
-//    |
-//    |
-//Inside displayProducts
+/*Task 4
+   ^ 
+   |
+   |
+Inside displayProducts*/
+
