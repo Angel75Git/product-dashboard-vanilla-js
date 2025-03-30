@@ -18,7 +18,7 @@ function fetchProductsThen() {
         .catch(err => console.error('Error fetching products:', err));
 }
 //calling function
-fetchProductsThen();
+
 //Task 3 
 //Getting product div
 const mainContainer = document.getElementById('product-container')
@@ -55,11 +55,11 @@ function handleError(error) {
     mainContainer.innerHTML = `<p style="color:red;">Failed to load products</p>`;
 }
 
-fetchProductsAsync()
-
 /*Task 4
    ^ 
    |
    |
 Inside displayProducts*/
 
+fetchProductsThen();
+fetchProductsAsync();
